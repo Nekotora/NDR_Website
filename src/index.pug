@@ -5,35 +5,46 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(rel="stylesheet", href="./style.scss")
+    link(rel="stylesheet", href="./css/icon.css")
     title NDR - 东软校园网络认证客户端
   body
     .main
       .ch.intro
         .container
+          .hello
+            .logo
+              img(alt="logo",src="./image/icon.png")
             h1 连接东软，连接世界
-            h2 属于东软的校园网上网客户端
+            h2 NDR · 属于东软的校园网上网客户端
             .btnbox
               a.btn(href="#") 下载
               a.btn(href="#") 了解更多
-            .demo
-              img(src="./image/ndr_login.png")
       .ch.about
-        .container
-          .title
-            h2 由学生开发维护的网络客户端
-            h3 
-          .clear
-              p NDR 校园网络认证客户端是由东软网络安全工作室开发，东软教学支持与实验中心监制的大连东软信息学院校园网络客户端。
-              p 该软件目前已经实现拨号、用户身份认证等DR.COM客户端的大部分模块以及增加了一些新的功能。
-              p 该软件针对校园网络，其开发前景是光明的。在NDR之上可以集成更多方便的功能，如集成上网套餐查询、文件快速交换、网络报修等等等。
-              p 值得庆幸的是，我们有一个强大的开发团队——东软网络安全工作室，我们可以用更多时间去设计和构思，用更短的时间去实现。
-              p 如果你对NDR的开发感兴趣并且有一定的开发能力，我们真诚的希望你加入进来，和我们一起工作。
+        .container.clear
+          .left.demo
+            img(src="./image/ndr_login.png")
+          .right
+            .item
+              i.icon-globe
+              h4 即装即用，快速上网
+              p 全新设计的客户端，小巧方便，无需配置，校园网互联网轻松连接
+            .item
+              i.icon-flow-branch
+              h4 跨平台与IPv6支持
+              p 实在的上网工具，使用现代技术，支持多种操作系统，支持IPv6地址分配
+            .item
+              i.icon-cc-by
+              h4 由学生社团开发维护
+              p NDR由学生社团开发并维护，你可以随时报告问题建议，甚至加入我们一起开发
+            .item
+              i.icon-list-add
+              h4 校园生活从这里开始
+              p 不止于连接网络，绑定学生账号，获取教务素质教育信息学校通知，更多校园功能开发中
       .ch.download
         .container
           .title
             h2 在你常用的平台开始使用吧
-            h3 选择
-          .clear.content
+          .clear.downlist
             a(href="#")
               .item.windows
                 i.icon-windows
@@ -52,6 +63,144 @@ html(lang="en")
                 .content
                   h4 NDR for Linux 下载
                   span v1.0.1  / 更新时间：2019-02-01
+          p.tips * Ubuntu 17.04 和 17.10 需要 libpng12-0，可能需要手动安装依赖。
+          .devlog#devlog
+            h2 更新日志
+              a(href="javascript:showDevlog();") 展开
+            .content
+
+              .item
+                h4 Version 0.76 Build 20180929
+                p 漏洞修复
+                ul
+                  li 修复macOS用户经常断线的问题
+                  li 修复网卡选择的名字问题和选择重置问题
+
+              .item
+                h4 Version 0.74 Build 20171124
+                p 功能改动
+                ul
+                  li 增加开机自启动功能
+                p 漏洞修复
+                ul
+                  li 修复断线重连失败的问题
+
+              .item
+                h4 Version 0.72 Build 20170828
+                p 功能改动
+                ul
+                  li 增加关闭消息推送功能
+                p 漏洞修复
+                ul
+                  li 修复了之前容易崩溃的bug
+
+              .item
+                h4 Version 0.67 Build 20160903
+                p 功能改动
+                ul
+                  li 增加“故障修复”功能（Windows平台），解决“NDR已停止运行”错误
+                p 漏洞修复
+                ul
+                  li 修复其他部分bug
+
+              .item
+                h4 Version 0.66 Build 20160827
+                p 功能改动
+                ul
+                  li 添加新套餐“联通合约50M”
+                p 漏洞修复
+                ul
+                  li 修复其他部分bug
+
+              .item
+                h4 Version 0.65 Build 20160604
+                p 功能改动
+                ul
+                  li 加入显示密码按钮
+                p 漏洞修复
+                ul
+                  li 更改更新验证机制，降低由于网络异动引起的“更新服务器连接失败”发生概率
+
+              .item
+                h4 Version 0.62 Build 20150929
+                p 功能改动
+                ul
+                  li 完善部分错误提示信息
+                  li 针对 OS X El Capitan 中有关选择网卡的 BUG 进行了 Workaround
+                p 漏洞修复
+                ul
+                  li 修复主面板的工具栏在注销后不消失的问题
+                  li 修复在 OS X 中重复创建多个连接的 BUG
+                  li 修复在某些版本的 OS X 中无法保存账户信息的问题
+
+
+              .item
+                h4 Version 0.61 Build 20150924 
+                p 该版本只针对MacOS。
+                p 功能改动
+                ul
+                  li MacOS X版正式发布
+                  li 增加电信10M套餐
+                  li 允许用户适当调节主面板尺寸
+
+              .item
+                h4 Version 0.60 Build 20150917
+                p 功能改动
+                ul
+                  li 添加多语言支持（英语、日语、韩语）
+                  li 完善和改进用户反馈功能
+                  li 该软件的Linux版本同步发布
+                  li 完善更新模块
+                p 漏洞修复
+                ul
+                  li 修复主窗口因窗口位置异常而无法显示的问题
+                  li 修复Host ndr.neusoft.edu.cn not found错误
+                  li 修复部分其他细节问题
+
+              .item
+                h4 Version 0.59 Build 20150909
+                p 功能改动
+                ul
+                  li 增加拨号完毕后自动最小化功能
+                  li 增加用户反馈模块
+                  li 增加选择网卡功能
+                  li 增加较为友好的错误提示
+                p 漏洞修复
+                ul
+                  li 更新模块漏洞修复
+                  li PPPoE 756 错误问题修复
+                  li 修复部分细节问题
+
+              .item
+                h4 Version 0.55 Build 20150830
+                p 功能改动
+                ul
+                  li 增加部分设置项
+                  li 增加断线重连功能
+                  li 删除电信10M套餐
+                  li 添加快捷键注销
+                p 漏洞修复
+                ul
+                  li 修复部分细节问题
+
+              .item
+                h4 Version 0.51 Build 20150827
+                p 功能改动
+                ul
+                  li 改善界面
+                p 漏洞修复
+                ul
+                  li 修复首次登陆时长31天的问题
+                  li 修复无法保存密码的问题
+                  li 修复无法自动登录的问题
+
+              .item
+                h4 Version 0.50 Build 20150826
+                p 功能改动
+                ul
+                  li 增加IPv6协议的支持
+                  li 上线
+                  li 报请网络中心批准发布
       .ch.help
         .container
           .title
@@ -77,3 +226,7 @@ html(lang="en")
       .ch.footer
         .container
           h2 NDR 东软校园网络认证客户端
+  script.
+    function showDevlog(){
+      document.getElementById('devlog').classList.add("active");
+    }
