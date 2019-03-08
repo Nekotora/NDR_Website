@@ -377,3 +377,64 @@ a:hover {
     font-size: 13px;
   }
 }
+
+@media (max-width: 700px) {
+  .container{
+    width: 94%;
+    padding: 40px 3%;
+  }
+  .right,.left{
+    float: none;
+  }
+  .ch .title {
+    padding-bottom: 20px;
+  }
+
+  .intro{
+    h1{
+      font-size: 24px;
+    }
+    h2{
+      font-size: 18px;
+    }
+  }
+  .about .container{
+    padding: 30px 0;
+  }
+  .about{
+    .left,.right{
+      width: auto;
+      padding-right: 0;
+    }
+    .left{
+      padding: 20px 0;
+    }
+    .item{
+      padding-left: 0;
+      padding: 0 2%;
+      width: 46%;
+    }
+  }
+  .ch.download .downlist {
+    margin: 20px 0 40px 0;
+  }
+  .ch.download .downlist .item{
+    float: none;
+    width: auto;
+    margin-bottom: 10px;
+  }
+  .ch.download .devlog .content {
+    column-count: 2;
+    column-gap: 3%;
+  }
+  .ch.help .item{
+    float: none;
+    width: auto;
+    margin-bottom: 30px;
+  }
+  .ch.help .gate a{
+    float: none;
+    width: auto;
+    display: block;
+  }
+}
